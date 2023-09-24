@@ -37,7 +37,7 @@ function Signup() {
                 localStorage.setItem('access_token', loginData.data.access);
                 localStorage.setItem('refresh_token', loginData.data.refresh);
                 axios.defaults.headers.common['Authorization'] = `Bearer ${loginData.data['access']}`;
-                window.location.href = '/';
+                window.location.href = '/userrecommender';
             })
             .catch(function(error) {
                 console.error("Registration error:", error);
